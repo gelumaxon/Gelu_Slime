@@ -32,10 +32,10 @@ class main extends PluginBase implements Listener{
     if($block->getId() === 165){
         $this->noDamage[$player->getName()] = $player->getName();
          $player->setMotion(new Vector3(0, 0.8, 0));
-         $world->addParticle(new Vector3($x + 0.5, $y, $z), new FlameParticle($x + 0.5, $y, $z));
-         $world->addParticle(new Vector3($x, $y, $z + 0.5), new FlameParticle($x, $y, $z + 0.5));
-         $world->addParticle(new Vector3($x - 0.5, $y, $z), new FlameParticle($x - 0.5, $y, $z));
-         $world->addParticle(new Vector3($x, $y, $z - 0.5), new FlameParticle($x, $y, $z - 0.5));
+         $world->addParticle(new Vector3($x, $y, $z), new FlameParticle());
+         $world->addParticle(new Vector3($x, $y, $z), new FlameParticle());
+         $world->addParticle(new Vector3($x, $y, $z), new FlameParticle());
+         $world->addParticle(new Vector3($x, $y, $z), new FlameParticle());
     }
    }
        public function onDamage(EntityDamageEvent $event){
