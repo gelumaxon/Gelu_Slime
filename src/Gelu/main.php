@@ -41,9 +41,9 @@ class main extends PluginBase implements Listener{
        public function onDamage(EntityDamageEvent $event){
       if($event->getEntity() instanceof Player){
   if($event->getCause() == EntityDamageEvent::CAUSE_FALL){
-    if(isset($this->noDamage[$event->getEntity()->getName()])){
+    if(isset($this->noDamage[$event->getEntity()->getNameTag()])){
      $event->cancel();
-          unset($this->noDamage[$event->getEntity()->getName()]);
+          unset($this->noDamage[$event->getEntity()->getNameTag()]);
   }
  }
      }
